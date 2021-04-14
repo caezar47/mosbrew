@@ -1,0 +1,61 @@
+{
+	"contacts":{
+		"name":"mosbrew.ru",
+		"domain":"mosbrew.ru",
+		"domain_link":"https://mosbrew.ru//",
+		"color":"#F24F00",
+		"agreement_page":"agreement",
+		"copyright":"timberk",
+		"email":"what@2sharp.ru",
+		"email2":"pr@2sharp.ru",
+		"phone":"+7 495 514 12 34",  
+		"phone_tel":"+74955141234", 
+		"phone2":"+7 903 786 19 12",  
+		"phone2_tel":"+79037861912",   
+		"clock":"С 10 до 19:00, без выходных",  
+		"address":"115184, Россия, Москва,  ул. Большая Татарская, д. 35 стр. 7-9",
+		"map_center":"55.737464, 36.6367",
+		"map_center_coord":"[55.737464, 37.6367]",
+		"map_zoom":"18",
+		"map_zoom_xs":"12",
+		"map_point_coord":"[55.737464, 37.6367]",
+		"map_point_heading":"Большая Татарская улица, 35 строение 7-9"
+	},
+	"soc":{
+		"vk":"#",
+		"fb":"#",
+		"tw":"#",
+		"g":"#",
+		"yb":"#"
+	},
+
+	"page":{
+		"index":"./",
+		"catalog":"./catalog.html",
+		"catalog_cat":"./catalog-category.html",
+		"catalog_card":"./catalog-card.html",
+		"contacts":"./contacts.html"
+	},
+	"prefix":{
+		"section":"section__",
+		"header":"page-header__",
+		"form":"form__",
+		"tabs":"tabs__",
+		"btn":"btn__",
+		"link":"link__",
+		"breadcrumb":"breadcrumb__",
+		"card":"card__",
+		"btn-icon":"btn-icon__"
+	},
+	"tg":{
+		"prefix":"tg__",
+		"remove":"tg__remove"
+	},
+	"path":{		                  
+		"css":"./css",
+		"img":"./img",
+		"js":"./js",
+		"favicon":"./favicon",
+		"docs":"./docs" 
+	}
+}

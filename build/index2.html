@@ -96,12 +96,95 @@
 <![endif]-->
 <script src="./js/jquery-3.2.1.min.js" ></script>
 <script src="./js/document-ready.js" ></script>
-<script>
-wow = new WOW({
-    offset: 150,
-    //mobile: false,
-})
-wow.init();
-</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+		<script>
+			var controller = new ScrollMagic.Controller();
+			$(function () { 
+				new ScrollMagic.Scene({
+					triggerElement: "#trigger1", 
+					duration: 2000,
+					offset: 0,
+				})
+				.setClassToggle("#pin1", "visible")
+				.addIndicators({name: "Картинка - появление"})
+				.addTo(controller);
+
+				new ScrollMagic.Scene({
+					triggerElement: "#trigger1", 
+					duration: 1200,
+					offset: 350
+				})
+				.setPin("#pin1") 
+				.addIndicators({name: "Картинка - прилипание"})
+				.addTo(controller);
+
+				new ScrollMagic.Scene({
+					triggerElement: "#trigger1", 
+					offset: 500,
+					duration: 500,
+				})
+				.setClassToggle("#pin2", "visible") 
+				.addIndicators({name: "Текст левый"})
+				.addTo(controller);
+
+				new ScrollMagic.Scene({
+					triggerElement: "#trigger1", 
+					offset: 1000,
+					duration: 600,
+				})
+				.setClassToggle("#pin3", "visible") 
+				.addIndicators({name: "Текст правый"})
+				.addTo(controller);
+			});
+			</script>
+			<style type="text/css">				
+				#img1 {
+					opacity: 0;
+					transition: all 0.6s ease-in-out;
+					transition-delay: 0.3s;
+				}
+				#img2 {
+					opacity: 0;
+					transition: all 0.6s ease-in-out;
+					transition-delay: 0.6s;
+				}
+				#img3 {
+					opacity: 0;
+					transition: all 0.6s ease-in-out;
+					transition-delay: 0.8s;
+				}
+				#pin1.visible #img1,
+				#pin1.visible #img2,
+				#pin1.visible #img3 {
+					opacity: 1;
+				}
+				#pin2 {
+					position: absolute;
+					top: 600px;
+					transition: all 0.4s ease-in-out;
+					opacity: 0;
+					transform: translate3d(-20px, 0px, 0);
+				}
+				#pin2.visible {
+					opacity: 1;
+					transform: translate3d(0px, 0px, 0);
+					/*transition: all 0.8s ease-in-out;*/
+					/*transition-delay: 0.4s;*/
+				}
+				#pin3 {
+					position: absolute;
+					top: 1100px;
+					right: 0;
+					transition: all 0.8s ease-in-out;
+					opacity: 0;
+					transform: translate3d(20px, 0px, 0);
+				}
+				#pin3.visible {
+					opacity: 1;
+					transform: translate3d(0px, 0px, 0);
+					/*transition-delay: 0.4s;*/
+				}
+			</style>
 	</body>
 </html>

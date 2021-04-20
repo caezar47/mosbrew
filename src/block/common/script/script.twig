@@ -5,6 +5,15 @@
 <![endif]-->
 <script src="{{path.js}}/jquery-3.2.1.min.js" ></script>
 <script src="{{path.js}}/document-ready.js" ></script>
+{% if wow == 'true' %}
+<script>
+wow = new WOW({
+    offset: 150,
+    //mobile: false,
+})
+wow.init();
+</script>
+{% endif %}
 {# 
 <script src="{{path.js}}/svg4everybody.min.js" ></script>
 <script>

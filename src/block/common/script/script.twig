@@ -14,6 +14,51 @@ wow = new WOW({
 wow.init();
 </script>
 {% endif %}
+{% if fullpage == 'true' %}
+{#
+<script src="vendors/easings.min.js"></script>
+
+ <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> #}
+
+<script src="{{path.js}}/fullpage.min.js"></script>
+<script>
+	$('#fullpage').fullpage({
+		//options here
+		//autoScrolling:true,
+		//fadingEffect:true,
+		fixedElements: '#img',
+		//scrollHorizontally: true
+		/*afterLoad: function(origin, destination, direction){
+		var loadedSection = this;
+
+			//using index
+			if(origin.index == 2){
+				alert("Section 3 ended loading");
+			}
+		}*/
+		onLeave: function(origin, destination, direction){
+			var leavingSection = this;
+
+			if(origin.index == 0 && direction =='down' || origin.index == 4 && direction =='up'){
+				$('#img').addClass('visible');
+			}
+			else if(origin.index == 1 && direction == 'up' || origin.index == 3 && direction == 'down' ){				
+				$('#img').removeClass('visible');
+			}
+
+
+			if(origin.index == 0 && direction =='down'){
+				$('#img').addClass('animate');
+			}
+			
+			else if(origin.index == 1 && direction =='up'){
+				$('#img').removeClass('animate');
+			}
+		}
+	});
+
+</script>
+{% endif %}
 {# 
 <script src="{{path.js}}/svg4everybody.min.js" ></script>
 <script>

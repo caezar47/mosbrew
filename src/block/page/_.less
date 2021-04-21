@@ -2,14 +2,19 @@
 	&wrap{
 	    background-position: center 0;
 	    background-repeat: no-repeat;
+	    //background-repeat: repeat-y;
 	}
-	&content{
-		
+	&content{		
 		&.is--header{
 			position: relative;
 			padding-top: 180px;
+			padding-top: 225px;
 			padding-bottom: 140px;
 			overflow: hidden;
+			#trigger &{
+				position: static;
+				overflow: visible;
+			}
 		}
 	}
 	&container{

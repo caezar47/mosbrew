@@ -4,7 +4,7 @@
 		{% include "../block/common/head/head.twig" with {title:"Хамовники безалкогольное"}  %}
 	</head>
 	<body>
-		<main class="{{prefix.section}}wrap" style="background-image: url({{path.img}}/default/body-bg.png)">
+		<main class="{{prefix.section}}wrap" style="background-image: url({{path.img}}/default/body-bg.png)"> 
 			{% include "../block/page/index.twig" with {
 				view:"header", 
 				content_prefix:prefix.section, 
@@ -70,7 +70,7 @@
 
 				new ScrollMagic.Scene({
 					triggerElement: "#trigger1", 
-					offset: 500,
+					offset: 600,
 					duration: 500,
 				})
 				.setClassToggle("#pin2", "visible") 

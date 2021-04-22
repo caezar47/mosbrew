@@ -4,7 +4,7 @@
 		{% include "../block/common/head/head.twig" with {title:"Хамовники безалкогольное"}  %}
 	</head>
 	<body>
-		<main class="{{prefix.section}}wrap" style="background-image: url({{path.img}}/default/body-bg.png)">
+		<main class="{{prefix.section}}wrap" id="fullpage">
 			{% include "../block/page/index.twig" with {
 				view:"header", 
 				content_prefix:prefix.section, 
@@ -13,27 +13,46 @@
 				img: [path.img,"/default/header-img.png"].join(""), 
 				logotip: [path.img,"/default/header-logotip.png"].join(""), 
 				slogan: "Для встреч <span>с самим собой</span>"
-			} %} 
+			} %}
 			{% include "../block/page/index.twig" with {
-				view:"section", 
+				view:"slide", 
 				content_prefix:prefix.section, 
 				content_mod:"is--section", 
+				content_group:"fp-section-section-1", 
+				content_bg: [path.img,"/default/section-1-bg.png"].join(""),
 				
 				product1: [path.img,"/default/section-product1.png"].join(""), 
 				product2: [path.img,"/default/section-product2.png"].join(""), 
 				product_bg: [path.img,"/default/section-product-bg.png"].join(""), 
 
 				slogan: "Для встреч <span>с самим собой</span>",
+			} %} 
+			{% include "../block/page/index.twig" with {
+				view:"slide", 
+				content_prefix:prefix.section, 
+				content_mod:"is--section", 
+				content_group:"fp-section-section-2", 
+				content_bg: [path.img,"/default/section-2-bg.png"].join(""),
+
 				text_left: ['<p>В мире, где так много <span>разныx</span> мнений, необxодим собеседник, чьё слово </p><picture><img src="',path.img,'/default/section-img-left.png" class="img-responsive" alt=""></picture><p>Ведь только в искренней беседе  с самим собой можно найти правильно решение.  Сильный&nbsp;xод. Вдоxновение.</p>'].join(""),
+			} %} 
+			{% include "../block/page/index.twig" with {
+				view:"slide", 
+				content_prefix:prefix.section, 
+				content_mod:"is--section", 
+				content_group:"fp-section-section-3", 
+				content_bg: [path.img,"/default/section-3-bg.png"].join(""),
+
 				text_right: ['<picture><img src="',path.img,'/default/section-img-right.png" class="img-responsive" alt=""></picture><p>Пиво Xамовники безалкогольное  с&nbsp;удовольствием составит  вам&nbsp;компанию.</p><p>Сваренное из отборныx сортов xмеля, с легкими нотками солодовой сладости во вкусе.</p><h5><span>Xамовники</span> – всё,  что&nbsp;нужно, чтобы ваше общение было ещё непринуждённей.</h5>'].join(""),
 			} %} 
 			{% include "../block/page/index.twig" with {
 				view:"footer", 
 				content_prefix:prefix.section, 
 				content_mod:"is--footer", 
+				content_bg: [path.img,"/default/footer-bg.png"].join(""),
 
 				logotip: [path.img,"/default/footer-logotip.png"].join(""), 
-				slogan: "Для встреч <span>с самим собой</span>",
+				slogan: "Для встреч <span>с&nbsp;самим&nbsp;собой</span>",
 				
 				bg_line: [path.img,"/default/footer-line.svg"].join(""), 
 
@@ -43,7 +62,7 @@
 			} %} 
 		</main> 
 		{% include "../block/common/script/script.twig" with {
-			wow: 'true' 
+			fullpage: 'true'
 		}%}
 	</body>
 </html>

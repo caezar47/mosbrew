@@ -1,4 +1,7 @@
-*::selection{background: darken(@white, 20%);}
+*{
+	box-sizing: border-box;
+	&::selection{background: darken(@white, 20%);}
+}
 html{	
 	overflow: initial;
 	&.is--show{

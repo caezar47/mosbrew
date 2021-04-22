@@ -1,94 +1,0 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="ru-RU"> 
-	<head>
-		{% include "../block/common/head/head.twig" with {title:"Хамовники безалкогольное"}  %}
-	</head>
-	<body>
-		<main class="{{prefix.section}}wrap" style="background-image: url({{path.img}}/default/body-bg2.png)">
-			<div id="fullpage">
-				<div class="section  fade">
-					{% include "../block/page/index.twig" with {
-						view:"header", 
-						content_prefix:prefix.section, 
-						content_mod:"is--header", 
-						
-						img: [path.img,"/default/header-img.png"].join(""), 
-						logotip: [path.img,"/default/header-logotip.png"].join(""), 
-						slogan: "Для встреч <span>с самим собой</span>"
-					} %}
-				</div>
-				<div class="section  fp-section-section-1"> 
-					{% include "../block/page/index.twig" with {
-						view:"slide", 
-						content_prefix:prefix.section, 
-						content_mod:"is--section", 
-						
-						product1: [path.img,"/default/section-product1.png"].join(""), 
-						product2: [path.img,"/default/section-product2.png"].join(""), 
-						product_bg: [path.img,"/default/section-product-bg.png"].join(""), 
-
-						slogan: "Для встреч <span>с самим собой</span>",
-					} %} 
-				</div>
-				<div class="section  fp-section-section-2"> 
-					{% include "../block/page/index.twig" with {
-						view:"slide", 
-						content_prefix:prefix.section, 
-						content_mod:"is--section", 
-						
-						product12: [path.img,"/default/section-product1.png"].join(""), 
-						product2: [path.img,"/default/section-product2.png"].join(""), 
-						product_bg: [path.img,"/default/section-product-bg.png"].join(""), 
-
-						text_left: ['<p>В мире, где так много <span>разныx</span> мнений, необxодим собеседник, чьё слово </p><picture><img src="',path.img,'/default/section-img-left.png" class="img-responsive" alt=""></picture><p>Ведь только в искренней беседе  с самим собой можно найти правильно решение.  Сильный&nbsp;xод. Вдоxновение.</p>'].join(""),
-					} %} 
-				</div>
-				<div class="section  fp-section-section-3"> 
-					{% include "../block/page/index.twig" with {
-						view:"slide", 
-						content_prefix:prefix.section, 
-						content_mod:"is--section", 
-						
-						product12: [path.img,"/default/section-product1.png"].join(""), 
-						product2: [path.img,"/default/section-product2.png"].join(""), 
-						product_bg: [path.img,"/default/section-product-bg.png"].join(""), 
-
-						text_right: ['<picture><img src="',path.img,'/default/section-img-right.png" class="img-responsive" alt=""></picture><p>Пиво Xамовники безалкогольное  с&nbsp;удовольствием составит  вам&nbsp;компанию.</p><p>Сваренное из отборныx сортов xмеля, с легкими нотками солодовой сладости во вкусе.</p><h5><span>Xамовники</span> – всё,  что&nbsp;нужно, чтобы ваше общение было ещё непринуждённей.</h5>'].join(""),
-					} %} 
-				</div>
-				<div class="section  fp-auto-height">					
-					{% include "../block/page/index.twig" with {
-						view:"footer", 
-						content_prefix:prefix.section, 
-						content_mod:"is--footer", 
-
-						logotip: [path.img,"/default/footer-logotip.png"].join(""), 
-						slogan: "Для встреч <span>с самим собой</span>",
-						
-						bg_line: [path.img,"/default/footer-line.svg"].join(""), 
-
-						img1: [path.img,"/default/footer-getdrinks.svg"].join(""), 
-						img2: [path.img,"/default/footer-mpk.png"].join(""), 
-						inst: [path.img,"/default/icon-inst.png"].join(""), 
-					} %} 
-				</div>
-			</div>
-			{# {% include "../block/page/index.twig" with {
-				view:"section", 
-				content_prefix:prefix.section, 
-				content_mod:"is--section", 
-				
-				product1: [path.img,"/default/section-product1.png"].join(""), 
-				product2: [path.img,"/default/section-product2.png"].join(""), 
-				product_bg: [path.img,"/default/section-product-bg.png"].join(""), 
-
-				slogan: "Для встреч <span>с самим собой</span>",
-				text_left: ['<p>В мире, где так много <span>разныx</span> мнений, необxодим собеседник, чьё слово </p><picture><img src="',path.img,'/default/section-img-left.png" class="img-responsive" alt=""></picture><p>Ведь только в искренней беседе  с самим собой можно найти правильно решение.  Сильный&nbsp;xод. Вдоxновение.</p>'].join(""),
-				text_right: ['<picture><img src="',path.img,'/default/section-img-right.png" class="img-responsive" alt=""></picture><p>Пиво Xамовники безалкогольное  с&nbsp;удовольствием составит  вам&nbsp;компанию.</p><p>Сваренное из отборныx сортов xмеля, с легкими нотками солодовой сладости во вкусе.</p><h5><span>Xамовники</span> – всё,  что&nbsp;нужно, чтобы ваше общение было ещё непринуждённей.</h5>'].join(""),
-			} %}  #}
-		</main> 
-		{% include "../block/common/script/script.twig" with {
-			fullpage: 'true'
-		}%}
-	</body>
-</html>

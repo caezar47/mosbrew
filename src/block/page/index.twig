@@ -1,5 +1,5 @@
 {% if view == "header" %}
-	<header class="{{content_prefix}}content  {{content_mod}}" id="pin">
+	<header class="{{content_prefix}}content  {{content_mod}}  section  {{content_group}}" {% if content_bg %}style="background-image: url({{content_bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<picture class="{{content_prefix}}img  {{content_mod}}-logotip">
 				<img src="{{logotip}}" class="img-responsive" alt="">
@@ -11,39 +11,8 @@
 		</div>
 	</header>
 {% endif %}
-{% if view == "section" %}
-	<section class="{{content_prefix}}content  {{content_mod}}" id="trigger1">
-		<div class="{{content_prefix}}container container  {{content_mod}}">
-			<div class="{{content_prefix}}slogan  {{content_mod}}  is--right">{{slogan}}</div>
-			<div class="{{content_prefix}}slogan  {{content_mod}}  is--left">{{slogan}}</div>
-			<div id="pin1">
-				<div class="{{content_prefix}}img  {{content_mod}}" >
-					<picture class="{{content_prefix}}img  {{content_mod}}-product1  wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.8s" id="img1">
-						<img src="{{product1}}" class="img-responsive" alt="">
-					</picture>
-					<picture class="{{content_prefix}}img  {{content_mod}}-product2  wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1s" id="img2">
-						<img src="{{product2}}" class="img-responsive" alt="">
-					</picture>
-					<picture class="{{content_prefix}}img  {{content_mod}}-product-bg  wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.2s" id="img2">
-						<img src="{{product_bg}}" class="img-responsive" alt="">
-					</picture>
-				</div>
-			</div>
-			<div id="pin2">
-				<div class="{{content_prefix}}text  {{content_mod}} is--left  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s">
-					{{text_left}}
-				</div>
-			</div>
-			<div id="pin3">
-				<div class="{{content_prefix}}text  {{content_mod}} is--right  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.8s">
-					{{text_right}}
-				</div>
-			</div>
-		</div>
-	</section>
-{% endif %}
 {% if view == "slide" %}
-	<section class="{{content_prefix}}content  {{content_mod}}" >
+	<section class="{{content_prefix}}content  {{content_mod}}  section  {{content_group}}" {% if content_bg %}style="background-image: url({{content_bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			{% if slogan %}
 			<div class="{{content_prefix}}slogan  {{content_mod}}  is--right">{{slogan}}</div>
@@ -76,7 +45,7 @@
 	</section>
 {% endif %}
 {% if view == "footer" %}
-	<footer class="{{content_prefix}}content  {{content_mod}}" >
+	<footer class="{{content_prefix}}content  {{content_mod}}  section  {{content_group}}" {% if content_bg %}style="background-image: url({{content_bg}})"{% endif %}>
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<div class="{{content_prefix}}card  {{content_mod}}">
 
@@ -111,4 +80,38 @@
 			</div>
 		</div>
 	</footer>
+{% endif %}
+
+
+
+{% if view == "section" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" id="trigger1">
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}slogan  {{content_mod}}  is--right">{{slogan}}</div>
+			<div class="{{content_prefix}}slogan  {{content_mod}}  is--left">{{slogan}}</div>
+			<div id="pin1">
+				<div class="{{content_prefix}}img  {{content_mod}}" >
+					<picture class="{{content_prefix}}img  {{content_mod}}-product1  wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.8s" id="img1">
+						<img src="{{product1}}" class="img-responsive" alt="">
+					</picture>
+					<picture class="{{content_prefix}}img  {{content_mod}}-product2  wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1s" id="img2">
+						<img src="{{product2}}" class="img-responsive" alt="">
+					</picture>
+					<picture class="{{content_prefix}}img  {{content_mod}}-product-bg  wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.2s" id="img2">
+						<img src="{{product_bg}}" class="img-responsive" alt="">
+					</picture>
+				</div>
+			</div>
+			<div id="pin2">
+				<div class="{{content_prefix}}text  {{content_mod}} is--left  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s">
+					{{text_left}}
+				</div>
+			</div>
+			<div id="pin3">
+				<div class="{{content_prefix}}text  {{content_mod}} is--right  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.8s">
+					{{text_right}}
+				</div>
+			</div>
+		</div>
+	</section>
 {% endif %}

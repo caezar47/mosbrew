@@ -23,6 +23,7 @@ wow.init();
 <script src="{{path.js}}/fullpage.min.js"></script>
 <script>
 	$('#fullpage').fullpage({
+        //licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		//options here
 		//autoScrolling:true,
 		//fadingEffect:true,
@@ -39,10 +40,10 @@ wow.init();
 		onLeave: function(origin, destination, direction){
 			var leavingSection = this;
 
-			if(origin.index == 0 && direction =='down' || origin.index == 4 && direction =='up'){
+			if(origin.index == 0 && direction =='down'){
 				$('#img').addClass('visible');
 			}
-			else if(origin.index == 1 && direction == 'up' || origin.index == 3 && direction == 'down' ){				
+			else if(origin.index == 1 && direction == 'up'){				
 				$('#img').removeClass('visible');
 			}
 
@@ -53,6 +54,15 @@ wow.init();
 			
 			else if(origin.index == 1 && direction =='up'){
 				$('#img').removeClass('animate');
+			}
+
+			if(origin.index == 4 && direction =='up'){
+				$('#img').removeClass('static');
+				//$('.section__text.is--right').removeClass('is--static');
+			}
+			else if(origin.index == 3 && direction == 'down' ){				
+				$('#img').addClass('static');
+				//$('.section__text.is--right').addClass('is--static');
 			}
 		}
 	});

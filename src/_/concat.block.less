@@ -30,8 +30,8 @@
 			position: relative;
 			.fp-section-section-1 &{
 				position: static;
-				padding-top: 50px;
-				padding-bottom: 30px;
+				padding-top: 30px;
+				padding-bottom: 10px;
 				.media-breakpoint-up(@md; {
 					padding-top: 0px;
 					padding-bottom: 0px;
@@ -89,11 +89,11 @@
 		}		
 	}
 	&inner{
-		@media (min-width: 349px) and (max-width: 767px){
+		/*@media (min-width: 349px) and (max-width: 767px){
 			overflow: auto;
 			height: 330px;
 			margin-top: -20px;
-		}
+		}*/
 	}
 	&row{
 		&.is--footer{
@@ -166,16 +166,19 @@
 					picture{
 						min-width: inherit;
 						margin-top: 0;
-						margin-left: -42%;
+						margin-left: -25%;
 					    margin-bottom: -2%;
 					    transform: translate(6%, 0);
-					}
+					} 
 				});
     			.media-breakpoint-up(@xl; {  
     				margin-left: 5%;
     			});
     			.media-breakpoint-up(@xxl; {  
-    				margin-left: 10.4%;
+    				margin-left: 10.4%;				
+					picture{
+						margin-left: -42%;
+					}
     			});
 			}	
 			&.is--right{
@@ -318,12 +321,26 @@
 		}
 		&.is--section{
 			&{
-				z-index: 1;
-				max-width: 70%;
+				z-index: 10!important;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				.is--sticky &{
+					left: 50%;
+    				transform: translateX(-50%);
+				    background-color: #060e09;
+				}
+				.media-breakpoint-up(@md; {
+					padding-top: 0;
+					padding-bottom: 0;
+				});	
+			}
+			&-inner{
+				position: relative;
+				max-width: 63vw;
 				margin: 0 auto;
 				.media-breakpoint-up(@md; {
 					max-width: 583px;
-				});
+				});				
 			}
 			&-product1{
 				position: relative;

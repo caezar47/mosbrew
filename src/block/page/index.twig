@@ -20,15 +20,17 @@
 			{% endif %}
 			{% if product1 %}
 			<div class="{{content_prefix}}img  {{content_mod}}" id="img">
-				<picture class="{{content_prefix}}img  {{content_mod}}-product1">
-					<img src="{{product1}}" class="img-responsive" alt="">
-				</picture>
-				<picture class="{{content_prefix}}img  {{content_mod}}-product2">
-					<img src="{{product2}}" class="img-responsive" alt="">
-				</picture>
-				<picture class="{{content_prefix}}img  {{content_mod}}-product-bg">
-					<img src="{{product_bg}}" class="img-responsive" alt="">
-				</picture>
+				<div class="{{content_prefix}}img  {{content_mod}}-inner">
+					<picture class="{{content_prefix}}img  {{content_mod}}-product1">
+						<img src="{{product1}}" class="img-responsive" alt="">
+					</picture>
+					<picture class="{{content_prefix}}img  {{content_mod}}-product2">
+						<img src="{{product2}}" class="img-responsive" alt="">
+					</picture>
+					<picture class="{{content_prefix}}img  {{content_mod}}-product-bg">
+						<img src="{{product_bg}}" class="img-responsive" alt="">
+					</picture>
+				</div>
 			</div>
 			{% endif %}
 			{% if text_left %}				

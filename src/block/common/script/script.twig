@@ -22,12 +22,17 @@ wow.init();
 
 <script src="{{path.js}}/fullpage.min.js"></script>
 <script>
+	if($(document).width() < 768) {
+		$(".scroll--xs").wrapAll('<div class="section__inner"></div>');
+		fullpage_api.setResponsive(true);
+	}
 	$('#fullpage').fullpage({
+		//responsiveWidth: '768',
+		fixedElements: '#img',
         //licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		//options here
 		//autoScrolling:true,
 		//fadingEffect:true,
-		fixedElements: '#img',
 		//scrollHorizontally: true
 		/*afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
@@ -66,7 +71,6 @@ wow.init();
 			}
 		}
 	});
-
 </script>
 {% endif %}
 {# 

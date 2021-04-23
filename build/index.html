@@ -9,7 +9,7 @@
 
 <link href="./css/style.css" rel="stylesheet">	</head>
 	<body>
-		<main class="section__wrap" id="fullpage">
+		<main class="section__wrap" id="fullpage" style="background-image: url(./img/default/body-bg.png)">
 				<header class="section__content  is--header  section  " >
 		<div class="section__container container  is--header">
 			<picture class="section__img  is--header-logotip">
@@ -44,12 +44,11 @@
 
 
 
- 
-				<section class="section__content  is--section  section  fp-section-section-2" style="background-image: url(./img/default/section-2-bg.png)">
+				<section class="section__content  is--section  section  fp-section-section-2  scroll--xs" style="background-image: url(./img/default/section-2-bg.png)">
 		<div class="section__container container  is--section">
 													
 			<div class="section__text  is--section  is--left">
-				<p>В мире, где так много <span>разныx</span> мнений, необxодим собеседник, чьё слово </p><picture><img src="./img/default/section-img-left.png" class="img-responsive" alt=""></picture><p>Ведь только в искренней беседе  с самим собой можно найти правильно решение.  Сильный&nbsp;xод. Вдоxновение.</p>
+				<p>В мире, где так много <span>разныx</span> мнений, необxодим собеседник, чьё слово </p><picture><img src="./img/default/section-img-left.png" class="img-responsive" alt=""></picture><p>Ведь только в искренней беседе  с&nbsp;самим собой можно найти правильно решение.  Сильный&nbsp;xод. Вдоxновение.</p>
 			</div>
 								</div>
 	</section>
@@ -57,7 +56,8 @@
 
 
  
-				<section class="section__content  is--section  section  fp-section-section-3" style="background-image: url(./img/default/section-3-bg.png)">
+			  
+			 	<section class="section__content  is--section  section  fp-section-section-3  scroll--xs" style="background-image: url(./img/default/section-3-bg.png)">
 		<div class="section__container container  is--section">
 																
 			<div class="section__text  is--section  is--right">
@@ -69,7 +69,7 @@
 
 
  
-				<footer class="section__content  is--footer  section  " style="background-image: url(./img/default/footer-bg.png)">
+				<footer class="section__content  is--footer  section  scroll--xs" style="background-image: url(./img/default/footer-bg.png)">
 		<div class="section__container container  is--footer">
 			<div class="section__card  is--footer">
 
@@ -80,7 +80,7 @@
 			</div>
 			<div class="section__grid  grid__row  is--footer" style="background-image: url(./img/default/footer-line.svg)">
 				<div>
-					<p>Заказать он-лайн Хамовники безалкогольное</p>
+					<p>Заказать он-лайн Хамовники&nbsp;безалкогольное</p>
 					<a href="https://getdrinks.ru/" target="_blank" rel="nofollow">
 						<picture>
 							<img src="./img/default/footer-getdrinks.svg" class="img-responsive" alt="">
@@ -108,7 +108,7 @@
 
 
  
-		</main> 
+		</main>  
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -120,12 +120,17 @@
 
 <script src="./js/fullpage.min.js"></script>
 <script>
+	if($(document).width() < 768) {
+		$(".scroll--xs").wrapAll('<div class="section__inner"></div>');
+		fullpage_api.setResponsive(true);
+	}
 	$('#fullpage').fullpage({
+		//responsiveWidth: '768',
+		fixedElements: '#img',
         //licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		//options here
 		//autoScrolling:true,
 		//fadingEffect:true,
-		fixedElements: '#img',
 		//scrollHorizontally: true
 		/*afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
@@ -164,7 +169,6 @@
 			}
 		}
 	});
-
 </script>
 	</body>
 </html>

@@ -1,4 +1,4 @@
-if($(document).width() < 768) {
+if($(document).width() < 575) {
 	$("#img").sticky({
 		topSpacing:0,
 		className: 'is--sticky'

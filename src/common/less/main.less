@@ -1,4 +1,5 @@
 *{
+	//content-visibility: auto;
 	box-sizing: border-box;
 	&::selection{background: darken(@white, 20%);}
 }
@@ -13,6 +14,13 @@ body {
 	position: relative;
 	color: @site_color;
 	background-color: @site_bg;
+	transition: @trs-site;
+	.media-breakpoint-up(@md; {
+		opacity: 0;
+		&.is--render{
+			opacity: 1;
+		}
+	});
 	/*		
 	html.is--show &{
 		overflow-y: hidden;

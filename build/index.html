@@ -10,13 +10,13 @@
 <link href="./css/style.css" rel="stylesheet">	</head>
 	<body>
 		<main class="section__wrap" id="fullpage" style="background-image: url(./img/default/body-bg.png)">
-				<header class="section__content  is--header  section  " >
+				<header class="section__content  is--header  section  " style="background-image: url(./img/default/header-bg-men.png)">
 		<div class="section__container container  is--header">
 			<picture class="section__img  is--header-logotip">
 				<img src="./img/default/header-logotip.png" class="img-responsive" alt="">
 			</picture>
 			<picture class="section__img  is--header-img">
-				<img src="./img/default/header-img.png" class="img-responsive" alt="">
+				<img src="./img/default/header-bg-men.png" class="img-responsive" alt="">
 			</picture>
 			<div class="section__slogan  is--header">Для встреч <span>с самим собой</span></div>
 		</div>
@@ -136,12 +136,15 @@
 		//scrollHorizontally: true
 		/*afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
-
 			//using index
 			if(origin.index == 2){
 				alert("Section 3 ended loading");
 			}
 		}*/
+		//afterLoad: function(origin, destination, direction){
+		afterRender: function(){
+			$('body').addClass('is--render');
+		},
 		onLeave: function(origin, destination, direction){
 			var leavingSection = this;
 
@@ -152,11 +155,9 @@
 				$('#img').removeClass('visible');
 			}
 
-
 			if(origin.index == 0 && direction =='down'){
 				$('#img').addClass('animate');
 			}
-			
 			else if(origin.index == 1 && direction =='up'){
 				$('#img').removeClass('animate');
 			}

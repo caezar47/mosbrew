@@ -36,12 +36,15 @@ wow.init();
 		//scrollHorizontally: true
 		/*afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
-
 			//using index
 			if(origin.index == 2){
 				alert("Section 3 ended loading");
 			}
 		}*/
+		//afterLoad: function(origin, destination, direction){
+		afterRender: function(){
+			$('body').addClass('is--render');
+		},
 		onLeave: function(origin, destination, direction){
 			var leavingSection = this;
 
@@ -52,11 +55,9 @@ wow.init();
 				$('#img').removeClass('visible');
 			}
 
-
 			if(origin.index == 0 && direction =='down'){
 				$('#img').addClass('animate');
 			}
-			
 			else if(origin.index == 1 && direction =='up'){
 				$('#img').removeClass('animate');
 			}
